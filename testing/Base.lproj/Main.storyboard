@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R09-zI-gKb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--video test-->
+        <scene sceneID="WgU-Vd-VyU">
+            <objects>
+                <viewController title="video test" id="R09-zI-gKb" customClass="VideoClippingVC" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ufl-dO-ML7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AwF-ew-XWQ" customClass="TrimmerView" customModule="PryntTrimmerView">
+                                <rect key="frame" x="0.0" y="517" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9LO-lI-aSW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3X-wP-yGK" userLabel="playerView">
+                                <rect key="frame" x="8" y="9" width="359" height="500"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="sy7-69-DHD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7S-L0-0t5">
+                                <rect key="frame" x="0.0" y="585" width="375" height="74"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-Al-3Dc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gp-62-IeG">
+                                                <rect key="frame" x="0.0" y="19" width="187.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Start/Stop">
+                                                    <color key="titleColor" red="0.87058823529999996" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="play:" destination="R09-zI-gKb" eventType="touchUpInside" id="NLn-2g-Fhk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo3-ci-Vqr">
+                                                <rect key="frame" x="187.5" y="20.5" width="187.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Load Random Video">
+                                                    <color key="titleColor" red="0.87058823529999996" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectAsset:" destination="R09-zI-gKb" eventType="touchUpInside" id="USU-4v-mTv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wKP-Al-3Dc" secondAttribute="bottom" id="FFn-YS-USR"/>
+                                    <constraint firstItem="wKP-Al-3Dc" firstAttribute="top" secondItem="z7S-L0-0t5" secondAttribute="top" id="jwJ-Ak-zPf"/>
+                                    <constraint firstAttribute="trailing" secondItem="wKP-Al-3Dc" secondAttribute="trailing" id="kSw-sZ-k40"/>
+                                    <constraint firstItem="wKP-Al-3Dc" firstAttribute="leading" secondItem="z7S-L0-0t5" secondAttribute="leading" id="qxE-pg-Y74"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FOQ-XN-4bX" firstAttribute="trailing" secondItem="AwF-ew-XWQ" secondAttribute="trailing" id="4az-7r-6NO"/>
+                            <constraint firstItem="z7S-L0-0t5" firstAttribute="trailing" secondItem="AwF-ew-XWQ" secondAttribute="trailing" id="IyD-nh-Iyx"/>
+                            <constraint firstItem="AwF-ew-XWQ" firstAttribute="firstBaseline" secondItem="R3X-wP-yGK" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="MUK-cW-8lf"/>
+                            <constraint firstItem="z7S-L0-0t5" firstAttribute="leading" secondItem="AwF-ew-XWQ" secondAttribute="leading" id="Qvg-K6-USa"/>
+                            <constraint firstItem="R3X-wP-yGK" firstAttribute="top" secondItem="Ufl-dO-ML7" secondAttribute="top" constant="9" id="YhE-5Y-drN"/>
+                            <constraint firstItem="R3X-wP-yGK" firstAttribute="leading" secondItem="FOQ-XN-4bX" secondAttribute="leading" constant="8" id="aIt-p0-8yx"/>
+                            <constraint firstItem="AwF-ew-XWQ" firstAttribute="leading" secondItem="FOQ-XN-4bX" secondAttribute="leading" id="fSC-7R-vOw"/>
+                            <constraint firstItem="z7S-L0-0t5" firstAttribute="top" secondItem="AwF-ew-XWQ" secondAttribute="bottom" constant="8" id="gvO-yw-n2B"/>
+                            <constraint firstItem="FOQ-XN-4bX" firstAttribute="trailing" secondItem="R3X-wP-yGK" secondAttribute="trailing" constant="8" id="xTd-e9-orY"/>
+                            <constraint firstItem="FOQ-XN-4bX" firstAttribute="bottom" secondItem="z7S-L0-0t5" secondAttribute="bottom" constant="8" id="zTx-dD-MZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FOQ-XN-4bX"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="1gp-62-IeG" id="Ig5-gq-rSG"/>
+                        <outlet property="playerView" destination="R3X-wP-yGK" id="mhX-eH-mTP"/>
+                        <outlet property="trimmerView" destination="AwF-ew-XWQ" id="XJu-Gf-q2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8PM-k4-HzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="-667.01649175412297"/>
+        </scene>
+    </scenes>
+</document>

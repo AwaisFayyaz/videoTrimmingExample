@@ -1,0 +1,20 @@
+PODS:
+  - FDTake (2.0.0)
+  - PryntTrimmerView (2.0.1)
+
+DEPENDENCIES:
+  - FDTake
+  - PryntTrimmerView
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FDTake
+    - PryntTrimmerView
+
+SPEC CHECKSUMS:
+  FDTake: 21152c660ddf075a859f86af83f9d17dc4b5a539
+  PryntTrimmerView: 4260ae497a2f3e1bbfc0b71247eb74ab92bf0490
+
+PODFILE CHECKSUM: 2b8d33bd57a2ab3ba64f8ffdbf4ecd4cccf326e1
+
+COCOAPODS: 1.5.0
